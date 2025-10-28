@@ -155,7 +155,10 @@ const fetchLiveNews = async (category = 'general', searchQuery = '', page = 1) =
         url = `${newsApiUrl}/top-headlines?category=${newsApiCategory}&country=us&page=${page}&pageSize=12&apiKey=${newsApiKey}`;
       }
       
-      const response = await fetch(url);
+     // const response = await fetch(url);
+      const proxyUrl = 'https://api.allorigins.win/raw?url=';
+const response = await fetch(proxyUrl + encodeURIComponent(url));
+      
       if (!response.ok) {
         const errorData = await response.json();
         throw new Error(errorData.message || 'Failed to fetch from NewsAPI');
