@@ -200,8 +200,9 @@ const response = await fetch(proxyUrl + encodeURIComponent(url));
         const gNewsCategory = category === 'general' ? 'general' : category.toLowerCase();
         url = `${gNewsApiUrl}/top-headlines?category=${gNewsCategory}&lang=en&max=12&page=${page}&apikey=${gNewsApiKey}`;
       }
-      
-      const response = await fetch(url);
+      const proxyUrl = 'https://api.allorigins.win/raw?url=';
+const response = await fetch(proxyUrl + encodeURIComponent(url));
+     // const response = await fetch(url);
       if (!response.ok) {
         const errorData = await response.json();
         throw new Error(errorData.message || 'Failed to fetch from GNews');
