@@ -132,11 +132,12 @@ const NEWS_API_CONFIG = {
   newsApiUrl: 'https://newsapi.org/v2',
   
   // Option 2: GNews.io (https://gnews.io/)
-  gNewsApiKey: 'YOUR_GNEWS_KEY_HERE',
+  gNewsApiKey: '4ef9f932e7a627a86ded2730b9366587',
   gNewsApiUrl: 'https://gnews.io/api/v4',
   
   // Current API selection: 'newsapi' or 'gnews'
-  activeApi: 'newsapi' // Change to 'gnews' to use GNews API
+  //activeApi: 'newsapi' 
+  activeApi: 'gnews'// Change to 'gnews' to use GNews API
 };
 
 // Fetch Live News Function
